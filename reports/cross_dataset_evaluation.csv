@@ -1,0 +1,4 @@
+Target Source (Domain C),Train Sources (A + B),Test Count,Cross-Domain Macro-F1,Cross-Domain High-Recall
+kaggle_faulty,"mendeley_soiling, roboflow_stains",23,0.9087,1.0
+mendeley_soiling,"kaggle_faulty, roboflow_stains",17,1.0,1.0
+roboflow_stains,"kaggle_faulty, mendeley_soiling",24,0.7483,1.0

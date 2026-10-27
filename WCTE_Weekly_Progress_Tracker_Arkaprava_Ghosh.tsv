@@ -1,0 +1,49 @@
+WCTE Project Weekly Progress Tracker		
+Arkaprava Ghosh - DA25C003		
+Reporting to: Ramesh sir (CTO) and Kavitha mam (Tech Lead)		
+Reporting period: 24 August–25 October 2026 | Updated: 21 October 2026		
+Week and date range	Work completed / in progress	Bottlenecks faced
+"Week 1
+24–30 August 2026"	"• Met Ramesh sir and Kavitha mam on 27 August.
+• Discussed practical ML problems, factory automation challenges, and possible project directions."	• Needed to finalise a suitable, high-impact problem statement.
+"Week 2
+31 August–6 September 2026"	"• Reviewed the existing VisureX approach and project poster.
+• Researched operator logbook digitization for MSMEs.
+• Drafted and submitted initial proposal on 2 September: Hands-free logbook & production tracking using Meta Glasses, ArUco marker gaze locks, mobile edge proxy, and CV dial/tray reading."	"• Changes in ambient factory lighting and camera orientation affected reading stability.
+• Wearable hardware constraints and edge processing reliability raised feasibility questions."
+"Week 3
+7–13 September 2026"	"• Explored Meta glasses workflow feasibility vs. fixed industrial inspection.
+• Researched optical capture bounds, Bluetooth bandwidth limits, and display parsing models.
+• Coordinated technical review on MSME shop-floor ergonomics and deployment costs."	"• Capture latency and battery constraints in harsh industrial settings.
+• Need to evaluate whether wearable glasses or fixed-surface visual inspection provides higher industry demand."
+"Week 4
+14–20 September 2026"	"• Pivoted project scope toward automated flat surface quality inspection.
+• Submitted revised project abstract on 15 September: Integrated visual inspection platform combining 2D surface anomaly detection with Automated Optical Inspection (AOI) for solar panels and sheet materials.
+• Defined the dual-engine concept: classical CV for preprocessing and ML for defect segmentation."	"• Narrowing down specific anomaly classes and defining quantifiable severity criteria.
+• Limited public availability of pixel-level defect masks."
+"Week 5
+21–27 September 2026"	"• Conducted literature review on solar photovoltaic (PV) soiling and defect inspection.
+• Formulated project boundary: in-scope stains (dust/soiling, bird droppings, mud) vs. out-of-scope defects (snow, mechanical cracks, electrical burns).
+• Prepared initial architectural proposal comparing single-stage classifiers against two-stage segmentation."	"• Scheduled review meeting was postponed due to team travel.
+• Most public datasets only provide image-level labels rather than pixel-level segmentation masks."
+"Week 6
+28 September–4 October 2026"	"• Attended technical review on 28 September with Ramesh sir and Kavitha mam.
+• Finalized the two-stage inspection architecture: Stage A for panel localization/rectification and Stage B for stain segmentation.
+• Defined explainability goals: replacing black-box classification with exact stain coverage % and localized hotspot alerts."	"• Background artifacts (sky, roof tiles, shadows) distort coverage metrics if panels are not strictly rectified.
+• Need for a robust boundary-detection baseline."
+"Week 7
+5–11 October 2026"	"• Attended meeting at WCTE Centre on 7 October discussing plausible datasets for model training.
+• Evaluated public repositories: Kaggle (Faulty Solar Panel Images), Mendeley Data (Solar Panel Soiling), and Roboflow Universe.
+• Designed data-hygiene protocol: Perceptual Hashing (pHash) to detect duplicate web images and prevent train–test leakage."	"• Reused images across public repositories cause severe train–test data leakage.
+• Extreme class imbalance between large clean areas and small, high-risk bird droppings."
+"Week 8
+12–18 October 2026"	"• Set up local development environment (Python 3.12, PyTorch, Albumentations, SMP, OpenCV).
+• Finalized operational decision rules: High Stain if Coverage ≥ 10% or any single bird blob ≥ 2%; 4×4 sub-panel grid breakdown.
+• Implemented Stage A perspective homography rectifier to canonical 512×512 view.
+• Formulated dataset curation pipeline: pHash deduplication, 70/15/15 group-stratified splits, and SAM 2/CVAT-aligned ground-truth mask preparation."	"• Ensuring augmentations avoid hue shifts that misrepresent dust tones.
+• Adapting models and training pipelines for efficient CPU execution."
+"Week 9 — ongoing
+19–25 October 2026"	"• Ingested and standardized multi-source datasets (Kaggle, Mendeley, Roboflow) into unified manifest.
+• Model is currently in the training process for the computer vision solar panel stain detection and segmentation network.
+• Monitoring training iterations, batch scheduling, and convergence across initial epochs."	"• Training execution time on local workstation hardware.
+• Balancing batch size and memory footprint during segmentation training."

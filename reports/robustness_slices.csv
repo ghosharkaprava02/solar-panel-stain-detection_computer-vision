@@ -1,0 +1,14 @@
+Slice Category,Value,Count,Macro-F1,High-Recall,Coverage MAE %,Stain IoU
+lighting,low_sun,16,0.9373,1.0,2.04,0.8784
+lighting,overcast,26,0.8831,1.0,6.87,0.7683
+lighting,sunny,22,0.8167,1.0,6.23,0.7898
+distance,close_up,26,0.8424,1.0,6.65,0.8124
+distance,distant,21,0.8444,1.0,5.61,0.7898
+distance,medium,17,0.9404,1.0,3.41,0.8057
+original_label,bird_dropping,13,0.7692,1.0,0.87,0.7111
+original_label,clean,21,1.0,0.0,0.0,1.0
+original_label,dust_soiling,21,1.0,1.0,15.17,0.6656
+original_label,mud,9,0.3077,1.0,2.07,0.7981
+source,kaggle_faulty,23,0.9087,1.0,6.94,0.763
+source,mendeley_soiling,17,1.0,1.0,3.33,0.8562
+source,roboflow_stains,24,0.7483,1.0,5.51,0.8042

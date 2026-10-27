@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WCTE Project Weekly Progress Tracker - Arkaprava Ghosh (DA25C003)</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 24px;
+    color: #202124;
+  }
+  .sheets-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(60,64,67,0.3), 0 4px 8px rgba(60,64,67,0.15);
+    overflow: hidden;
+    border: 1px solid #dadce0;
+  }
+  .sheets-top-bar {
+    background-color: #ffffff;
+    padding: 16px 24px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sheets-title-area h1 {
+    font-size: 18px;
+    margin: 0 0 4px 0;
+    color: #1a73e8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sheets-title-area p {
+    margin: 0;
+    font-size: 13px;
+    color: #5f6368;
+  }
+  .action-btn {
+    background-color: #1a73e8;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+  }
+  .action-btn:hover {
+    background-color: #1557b0;
+  }
+  .sheets-meta {
+    background-color: #f1f3f4;
+    padding: 12px 24px;
+    font-size: 13px;
+    border-bottom: 1px solid #dadce0;
+    line-height: 1.6;
+  }
+  .sheets-meta strong {
+    color: #3c4043;
+  }
+  table.sheets-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  table.sheets-table th {
+    background-color: #e8f0fe;
+    color: #1967d2;
+    font-weight: 600;
+    text-align: left;
+    padding: 12px 16px;
+    border: 1px solid #dadce0;
+    letter-spacing: 0.2px;
+  }
+  table.sheets-table td {
+    padding: 14px 16px;
+    border: 1px solid #dadce0;
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  table.sheets-table tr:nth-child(even) {
+    background-color: #fafbfc;
+  }
+  table.sheets-table tr:hover {
+    background-color: #f1f8ff;
+  }
+  .col-week {
+    width: 22%;
+    font-weight: 600;
+    color: #202124;
+  }
+  .col-week .date-sub {
+    font-weight: normal;
+    color: #5f6368;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  .col-work {
+    width: 48%;
+  }
+  .col-bottlenecks {
+    width: 30%;
+    color: #3c4043;
+  }
+  ul.work-list {
+    margin: 0;
+    padding-left: 18px;
+  }
+  ul.work-list li {
+    margin-bottom: 6px;
+  }
+  ul.work-list li:last-child {
+    margin-bottom: 0;
+  }
+  .badge-ongoing {
+    background-color: #e6f4ea;
+    color: #137333;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 4px;
+  }
+  .copy-status {
+    font-size: 12px;
+    color: #137333;
+    font-weight: 500;
+    display: none;
+    margin-right: 12px;
+  }
+</style>
+</head>
+<body>
+
+<div class="sheets-container">
+  <div class="sheets-top-bar">
+    <div class="sheets-title-area">
+      <h1>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#0F9D58"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        WCTE Project Weekly Progress Tracker
+      </h1>
+      <p>Arkaprava Ghosh (DA25C003) &bull; Final Year, Data Science and AI</p>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <span id="copyStatus" class="copy-status">✓ Copied to clipboard! Ready to paste into Google Sheets.</span>
+      <button class="action-btn" onclick="copyTableForSheets()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+        Copy for Google Sheets
+      </button>
+    </div>
+  </div>
+
+  <div class="sheets-meta">
+    <strong>Reporting to:</strong> Ramesh sir (CTO) and Kavitha mam (Tech Lead)<br>
+    <strong>Reporting period:</strong> 24 August–25 October 2026 | <strong>Updated:</strong> 21 October 2026
+  </div>
+
+  <table class="sheets-table" id="trackerTable">
+    <thead>
+      <tr>
+        <th class="col-week">Week and date range</th>
+        <th class="col-work">Work completed / in progress</th>
+        <th class="col-bottlenecks">Bottlenecks faced</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-week">
+          Week 1
+          <div class="date-sub">24–30 August 2026</div>
+        </td>
+        <td class="col-work">
+          <ul class="work-list">
+            <li>Met Ramesh sir and Kavitha mam on 27 August.</li>
+            <li>Discussed practical ML problems, factory automation challenges, and possible project directions.</li>
+          </ul>
+        </td>
+        <td class="col-bottlenecks">
+          • Needed to finalise a suitable, high-impact problem statement.
+        </td>
+      </tr>
+
+      <tr>
+        <td class="col-week">
+          Week 2
+          <div class="date-sub">31 August–6 September 2026</div>
+        </td>
+        <td class="col-work">
+          <ul class="work-list">
+            <li>Reviewed the existing VisureX approach and project poster.</li>
+            <li>Researched operator logbook digitization for MSMEs.</li>
+            <li>Drafted and submitted initial proposal on 2 September: Hands-free logbook & production tracking using Meta Glasses, ArUco marker gaze locks, mobile edge proxy, and CV dial/tray reading.</li>
+          </ul>
+        </td>
+        <td class="col-bottlenecks">
+          • Changes in ambient factory lighting and camera orientation affected reading stability.<br>
+          • Wearable hardware constraints and edge processing reliability raised feasibility questions.
+        </td>
+      </tr>
+
+      <tr>
+        <td class="col-week">
+          Week 3
+          <div class="date-sub">7–13 September 2026</div>
+        </td>
+        <td class="col-work">
+          <ul class="work-list">
+            <li>Explored Meta glasses workflow feasibility vs. fixed industrial inspection.</li>
+            <li>Researched optical capture bounds, Bluetooth bandwidth limits, and display parsing models.</li>
+            <li>Coordinated technical review on MSME shop-floor ergonomics and deployment costs.</li>
+          </ul>
+        </td>
+        <td class="col-bottlenecks">
+          • Capture latency and battery constraints in harsh industrial settings.<br>
+          • Need to evaluate whether wearable glasses or fixed-surface visual inspection provides higher industry demand.
+        </td>
+      </tr>
+
+      <tr>
+        <td class="col-week">
+          Week 4
+          <div class="date-sub">14–20 September 2026</div>
+        </td>
+        <td class="col-work">
+          <ul class="work-list">
+            <li>Pivoted project scope toward automated flat surface quality inspection.</li>
+            <li>Submitted revised project abstract on 15 September: Integrated visual inspection platform combining 2D surface anomaly detection with Automated Optical Inspection (AOI) for solar panels and sheet materials.</li>
+            <li>Defined the dual-engine concept: classical CV for preprocessing and ML for defect segmentation.</li>
+          </ul>
+        </td>
+        <td class="col-bottlenecks">
+          • Narrowing down specific anomaly classes and defining quantifiable severity criteria.<br>
+          • Limited public availability of pixel-level defect masks.
+        </td>
+      </tr>
+
+      <tr>
+        <td class="col-week">
+          Week 5
+          <div class="date-sub">21–27 September 2026</div>
+        </td>
+        <td class="col-work">
+          <ul class="work-list">
+            <li>Conducted literature review on solar photovoltaic (PV) soiling and defect inspection.</li>
+            <li>Formulated project boundary: in-scope stains (dust/soiling, bird droppings, mud) vs. out-of-scope defects (snow, mechanical cracks, electrical burns).</li>
+            <li>Prepared initial architectural proposal comparing single-stage classifiers against two-stage segmentation.</li>
+          </ul>
+        </td>
+        <td class="col-bottlenecks">
+          • Scheduled review meeting was postponed due to team travel.<br>
+          • Most public datasets only provide image-level labels rather than pixel-level segmentation masks.
+        </td>
+      </tr>
+
+      <tr>
+        <td class="col-week">
+          Week 6
+          <div class="date-sub">28 September–4 October 2026</div>
+        </td>
+        <td class="col-work">
+          <ul class="work-list">
+            <li>Attended technical review on 28 September with Ramesh sir and Kavitha mam.</li>
+            <li>Finalized the two-stage inspection architecture: Stage A for panel localization/rectification and Stage B for stain segmentation.</li>
+            <li>Defined explainability goals: replacing black-box classification with exact stain coverage % and localized hotspot alerts.</li>
+          </ul>
+        </td>
+        <td class="col-bottlenecks">
+          • Background artifacts (sky, roof tiles, shadows) distort coverage metrics if panels are not strictly rectified.<br>
+          • Need for a robust boundary-detection baseline.
+        </td>
+      </tr>
+
+      <tr>
+        <td class="col-week">
+          Week 7
+          <div class="date-sub">5–11 October 2026</div>
+        </td>
+        <td class="col-work">
+          <ul class="work-list">
+            <li>Attended meeting at WCTE Centre on 7 October discussing plausible datasets for model training.</li>
+            <li>Evaluated public repositories: Kaggle (Faulty Solar Panel Images), Mendeley Data (Solar Panel Soiling), and Roboflow Universe.</li>
+            <li>Designed data-hygiene protocol: Perceptual Hashing (pHash) to detect duplicate web images and prevent train–test leakage.</li>
+          </ul>
+        </td>
+        <td class="col-bottlenecks">
+          • Reused images across public repositories cause severe train–test data leakage.<br>
+          • Extreme class imbalance between large clean areas and small, high-risk bird droppings.
+        </td>
+      </tr>
+
+      <tr>
+        <td class="col-week">
+          Week 8
+          <div class="date-sub">12–18 October 2026</div>
+        </td>
+        <td class="col-work">
+          <ul class="work-list">
+            <li>Set up local development environment (Python 3.12, PyTorch, Albumentations, SMP, OpenCV).</li>
+            <li>Finalized operational decision rules: High Stain if Coverage ≥ 10% or any single bird blob ≥ 2%; 4×4 sub-panel grid breakdown.</li>
+            <li>Implemented Stage A perspective homography rectifier to canonical 512×512 view.</li>
+            <li>Formulated dataset curation pipeline: pHash deduplication, 70/15/15 group-stratified splits, and SAM 2/CVAT-aligned ground-truth mask preparation.</li>
+          </ul>
+        </td>
+        <td class="col-bottlenecks">
+          • Ensuring augmentations avoid hue shifts that misrepresent dust tones.<br>
+          • Adapting models and training pipelines for efficient CPU execution.
+        </td>
+      </tr>
+
+      <tr>
+        <td class="col-week">
+          Week 9
+          <div class="date-sub">19–25 October 2026</div>
+          <span class="badge-ongoing">Ongoing</span>
+        </td>
+        <td class="col-work">
+          <ul class="work-list">
+            <li>Ingested and standardized multi-source datasets (Kaggle, Mendeley, Roboflow) into unified manifest.</li>
+            <li>Model is currently in the training process for the computer vision solar panel stain detection and segmentation network.</li>
+            <li>Monitoring training iterations, batch scheduling, and convergence across initial epochs.</li>
+          </ul>
+        </td>
+        <td class="col-bottlenecks">
+          • Training execution time on local workstation hardware.<br>
+          • Balancing batch size and memory footprint during segmentation training.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+function copyTableForSheets() {
+  const tsvData = [
+    ["WCTE Project Weekly Progress Tracker", "", ""],
+    ["Arkaprava Ghosh - DA25C003", "", ""],
+    ["Reporting to: Ramesh sir (CTO) and Kavitha mam (Tech Lead)", "", ""],
+    ["Reporting period: 24 August–25 October 2026 | Updated: 21 October 2026", "", ""],
+    ["Week and date range", "Work completed / in progress", "Bottlenecks faced"],
+    ["Week 1\n24–30 August 2026", "• Met Ramesh sir and Kavitha mam on 27 August.\n• Discussed practical ML problems, factory automation challenges, and possible project directions.", "• Needed to finalise a suitable, high-impact problem statement."],
+    ["Week 2\n31 August–6 September 2026", "• Reviewed the existing VisureX approach and project poster.\n• Researched operator logbook digitization for MSMEs.\n• Drafted and submitted initial proposal on 2 September: Hands-free logbook & production tracking using Meta Glasses, ArUco marker gaze locks, mobile edge proxy, and CV dial/tray reading.", "• Changes in ambient factory lighting and camera orientation affected reading stability.\n• Wearable hardware constraints and edge processing reliability raised feasibility questions."],
+    ["Week 3\n7–13 September 2026", "• Explored Meta glasses workflow feasibility vs. fixed industrial inspection.\n• Researched optical capture bounds, Bluetooth bandwidth limits, and display parsing models.\n• Coordinated technical review on MSME shop-floor ergonomics and deployment costs.", "• Capture latency and battery constraints in harsh industrial settings.\n• Need to evaluate whether wearable glasses or fixed-surface visual inspection provides higher industry demand."],
+    ["Week 4\n14–20 September 2026", "• Pivoted project scope toward automated flat surface quality inspection.\n• Submitted revised project abstract on 15 September: Integrated visual inspection platform combining 2D surface anomaly detection with Automated Optical Inspection (AOI) for solar panels and sheet materials.\n• Defined the dual-engine concept: classical CV for preprocessing and ML for defect segmentation.", "• Narrowing down specific anomaly classes and defining quantifiable severity criteria.\n• Limited public availability of pixel-level defect masks."],
+    ["Week 5\n21–27 September 2026", "• Conducted literature review on solar photovoltaic (PV) soiling and defect inspection.\n• Formulated project boundary: in-scope stains (dust/soiling, bird droppings, mud) vs. out-of-scope defects (snow, mechanical cracks, electrical burns).\n• Prepared initial architectural proposal comparing single-stage classifiers against two-stage segmentation.", "• Scheduled review meeting was postponed due to team travel.\n• Most public datasets only provide image-level labels rather than pixel-level segmentation masks."],
+    ["Week 6\n28 September–4 October 2026", "• Attended technical review on 28 September with Ramesh sir and Kavitha mam.\n• Finalized the two-stage inspection architecture: Stage A for panel localization/rectification and Stage B for stain segmentation.\n• Defined explainability goals: replacing black-box classification with exact stain coverage % and localized hotspot alerts.", "• Background artifacts (sky, roof tiles, shadows) distort coverage metrics if panels are not strictly rectified.\n• Need for a robust boundary-detection baseline."],
+    ["Week 7\n5–11 October 2026", "• Attended meeting at WCTE Centre on 7 October discussing plausible datasets for model training.\n• Evaluated public repositories: Kaggle (Faulty Solar Panel Images), Mendeley Data (Solar Panel Soiling), and Roboflow Universe.\n• Designed data-hygiene protocol: Perceptual Hashing (pHash) to detect duplicate web images and prevent train–test leakage.", "• Reused images across public repositories cause severe train–test data leakage.\n• Extreme class imbalance between large clean areas and small, high-risk bird droppings."],
+    ["Week 8\n12–18 October 2026", "• Set up local development environment (Python 3.12, PyTorch, Albumentations, SMP, OpenCV).\n• Finalized operational decision rules: High Stain if Coverage ≥ 10% or any single bird blob ≥ 2%; 4×4 sub-panel grid breakdown.\n• Implemented Stage A perspective homography rectifier to canonical 512×512 view.\n• Formulated dataset curation pipeline: pHash deduplication, 70/15/15 group-stratified splits, and SAM 2/CVAT-aligned ground-truth mask preparation.", "• Ensuring augmentations avoid hue shifts that misrepresent dust tones.\n• Adapting models and training pipelines for efficient CPU execution."],
+    ["Week 9 — ongoing\n19–25 October 2026", "• Ingested and standardized multi-source datasets (Kaggle, Mendeley, Roboflow) into unified manifest.\n• Model is currently in the training process for the computer vision solar panel stain detection and segmentation network.\n• Monitoring training iterations, batch scheduling, and convergence across initial epochs.", "• Training execution time on local workstation hardware.\n• Balancing batch size and memory footprint during segmentation training."]
+  ];
+
+  let tsvString = tsvData.map(row => 
+    row.map(cell => `"${cell.replace(/"/g, '""')}"`).join("\t")
+  ).join("\r\n");
+
+  navigator.clipboard.writeText(tsvString).then(() => {
+    const status = document.getElementById("copyStatus");
+    status.style.display = "inline";
+    setTimeout(() => { status.style.display = "none"; }, 4000);
+  });
+}
+</script>
+
+</body>
+</html>
